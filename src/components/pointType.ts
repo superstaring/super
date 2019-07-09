@@ -5,7 +5,6 @@ interface pointType {
     radius: number;
     color: string;
     act?: boolean;
-    move: () => void;
   };
 }
 

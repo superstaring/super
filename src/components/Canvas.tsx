@@ -66,8 +66,8 @@ export default function Canvas() {
       ...cir.slice(0, index),
       point
         .move(
-          Math.floor(Math.random() * 17 + 4),
-          Math.floor(Math.random() * 17 + 4)
+          Math.floor(Math.random() * 21 + 4),
+          Math.floor(Math.random() * 21 + 4)
         )
         .changeColor(colorFun())
         .changeRadius(Math.floor(Math.random() * 17 + 4))
