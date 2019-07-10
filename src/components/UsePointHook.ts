@@ -2,6 +2,14 @@ import { useState } from "react";
 import { createContainer } from "unstated-next";
 import Point from "./Point";
 
+interface Props {
+  x: number;
+  y: number;
+  radius: number;
+  color: string;
+  act?: boolean;
+}
+
 const colorFun = () => {
   var r = Math.floor(Math.random() * 256);
   var g = Math.floor(Math.random() * 256);
@@ -11,10 +19,10 @@ const colorFun = () => {
   return colorNew;
 };
 
-const pointArr: Array<any> = [];
+const pointArr: Array<Props> = [];
 
 for (var i = 0; i < 100; i++) {
-  const point: any = new Point(
+  const point = new Point(
     Math.random() * (587 + 1 - 0) + 0,
     Math.random() * (587 + 1 - 0) + 0,
     5,

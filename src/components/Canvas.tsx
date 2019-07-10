@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled, { css, keyframes } from "styled-components";
 import PointContainer from "./UsePointHook";
-import Props from "./pointType";
+import pointType from "./pointType";
 
 const Div = styled.div`
   width: 598px;
@@ -35,14 +35,14 @@ const pCss = css`
 
 const P = styled.p`
   position: absolute;
-  width: ${(props: Props) => props.point.radius * 2}px;
-  height: ${(props: Props) => props.point.radius * 2}px;
-  border-radius: ${(props: Props) => props.point.radius * 4}px;
-  background: ${(props: Props) => props.point.color};
-  left: ${(props: Props) => props.point.x}px;
-  top: ${(props: Props) => props.point.y}px;
+  width: ${(props: pointType) => props.point.radius * 2}px;
+  height: ${(props: pointType) => props.point.radius * 2}px;
+  border-radius: ${(props: pointType) => props.point.radius * 4}px;
+  background: ${(props: pointType) => props.point.color};
+  left: ${(props: pointType) => props.point.x}px;
+  top: ${(props: pointType) => props.point.y}px;
   margin: 0;
-  ${(props: Props) => props.point.act && pCss};
+  ${(props: pointType) => props.point.act && pCss};
 `;
 
 const colorFun = () => {
