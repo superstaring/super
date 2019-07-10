@@ -26,9 +26,7 @@ for (var i = 0; i < 100; i++) {
 function UsePointHook() {
   const [show, setShow] = useState(false);
 
-  const [cir, setCir] = useState([
-    { x: 0, y: 0, radius: 5, color: "red", act: false }
-  ]);
+  const [cir, setCir] = useState(pointArr);
 
   return { show, setShow, cir, setCir, pointArr };
 }
